@@ -1,5 +1,5 @@
-nozeX = 0;
-nozeY = 0;
+noseX = 0;
+noseY = 0;
 difference = 0;
 rightWristX = 0;
 leftWristX = 0;
@@ -24,15 +24,15 @@ function modelLoaded()
 
 function gotPoses(results)
 {
-    if(results.lenght > 0)
+    if(results.length > 0)
     {
      console.log(results);
-     nozeX = results[0].pose.nose.X;
-     nozeY = results[0].pose.nose.Y;
-     console.log('noseX =' + nozeX + 'nozeY =' + nozeY);
+     noseX = results[0].pose.nose.x;
+     noseY = results[0].pose.nose.y;
+     console.log("noseX =" + noseX + "noseY =" + noseY);
 
-    leftWristX = results[0].pose.leftWristX;
-    rightWristX = results[0].pose.rightWristX;
+    leftWristX = results[0].pose.leftWrist.x;
+    rightWristX = results[0].pose.rightWrist.x;
 
     difference = floor(leftWristX -rightWristX);
 
